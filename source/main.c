@@ -5,9 +5,9 @@
 int main(){
     double a=1;
     double b=22;
-    double resultado = somar(a, b);
+    double resultado = calcular(1, a, b);
     printf("o resultado é %lf", resultado);
-     printf("Commit 1\n");
+    printf("Commit 1\n");
     printf("Escolha o nível de dificuldade\n");
     printf("1 Números entre 0-9\n");
     printf("2 Números entre 10-99\n1"); 
