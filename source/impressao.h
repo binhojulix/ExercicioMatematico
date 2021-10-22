@@ -1,7 +1,13 @@
 #ifndef _H_MAIN
-double somar(double  a, double b);
-double subtrair(double a, double   b);
-double dividir(double   a, double b);
-double multiplicar(double a, double  b);
-double calcular(int opcao, double a, double b);
+
+typedef struct impressao {
+    char operacaoMatematica[40];
+    int quantidaDeAcertos;
+    int quantidadeDeEerros;
+    char certo[5];
+} Impressao;
+
+void imprimir(double  a, double b);
+void imprimirEstatisica(Impressao *impressao);
+
 #endif

@@ -3,9 +3,9 @@
 #include "geraaleatorio.h"
 
 double gerarAleatorio(){
-
+    return 0;
 }
 
-double criarVetordeDouble(){
-    
+double criarVetordeDoubles(double a , double b){
+    return 0;
 }
