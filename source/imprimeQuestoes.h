@@ -8,6 +8,7 @@ struct impressao {
 };
 typedef struct impressao Impressao;
 
+void imprimeTabela(Impressao *linhas);
 void ImprimeResultado(Impressao* impressao);
 
 
