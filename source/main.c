@@ -40,17 +40,25 @@ int main(){
             double resposta;
             double valor1 = aleatorio(difuldade);
             double valor2 = aleatorio(difuldade);
+
             double resultado = calcular(operacao, valor1, valor2);
             printf("Quanto é %.1f + %.1f", valor1, valor2);
+
             scanf("%lf", resposta);
             char* mensagem;
+
             if(resultado == resposta){
                 mensagem = getMensagem(1);
                 estatistica.quantidadeDeAcerto+=1;
+                strcpy(impressao->certo, "sim");
             }else{
                 mensagem = getMensagem(0);
-                 estatistica.quantidadeDeErro+1;
+                estatistica.quantidadeDeErro+1;
+                strcpy(impressao->certo, "nao");
             }
+            impressao->resultado=resposta;
+            impressao->valorEsperado=resultado;
+            
             printf("%s", mensagem);
         }
 
