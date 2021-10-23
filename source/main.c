@@ -1,20 +1,46 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "calculadora.h"
+#include "menu.h"
+#include "estatistica.h"
+#include "geraAleatorio.h"
+#define NUMERO_DE_PERGUNTAS 10
 
 int main(){
-    double a=1;
-    double b=22;
-    double resultado = calcular(1, a, b);
-    printf("o resultado é %lf", resultado);
-    printf("Commit 1\n");
-    printf("Escolha o nível de dificuldade\n");
-    printf("1 Números entre 0-9\n");
-    printf("2 Números entre 10-99\n1"); 
-    printf("3 Números entre 100-999\n1");
-    printf("4 Números entre 1000-9999\n1"); 
-    printf("5 Números entre 10000-99999\n1");
-    printf("6 Números entre 100000-9999999\n1"); 
-    printf("7 Números entre 1000000-99999999\n");
-    
+
+    while(1){
+
+        int difuldade, operacao;
+        mostrarMenuDificuldade();
+
+        do{
+            scanf("%d", &difuldade);
+        }while(difuldade < 1 || difuldade > 7 );
+
+        mostrarMenuOperacao();
+
+        do{
+            scanf("%d", &operacao);
+        }while(operacao < 1 || operacao > 5 );
+
+        if(operacao>4){
+
+        }
+
+        for(int i=1; i<=NUMERO_DE_PERGUNTAS; i++){
+            double resposta;
+            double valor1 = aleatorio();
+            double valor2 = aleatorio();
+            double resultado = calcular(operacao, valor1, valor2);
+            printf("Quanto é %.1f + %.1f", valor1, valor2);
+            scanf("%lf", resposta);
+            if(resultado == resposta){
+
+            }
+        }
+
+        mostrarEspostas();
+        imprimirEstatisica();
+        printf("Fim do questionário!\n");
+    }
 }
